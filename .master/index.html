@@ -13,10 +13,7 @@
             <div class="well">
                 <form id="input-form" style="padding-bottom: 20px;">
                     <input type="number" id="num-one"/>
-                    
-                    <!--TODO : Create input of type number with id num-two -->
-                    
-                    
+                    <input type="number" id="num-two"/>
                     <input type="submit" value="Submit"/>
                 </form>
                 <div id="result"></div>
@@ -28,13 +25,16 @@
                     event.preventDefault();
                     
                     // TODO 1 : create var a, and assign to the expression: document.getElementById("num-one").value;
-                    
+                    var a = document.getElementById("num-one").value;
                     
                     // TODO 2 : create var b, and assign it to the value of the element with id "num-two" (see TODO 1 for example)
-                    
+                    var b = document.getElementById("num-two").value;
                     
                     // TODO 3: create var result and assign to it the sum of a and b //
+                    //var result = a + b;
                     
+                    // TODO 3.B : REFACTOR STEP 3 to convert String input to Number using parseInt(num, 10) //
+                    var result = parseInt(a, 10) + parseInt(b, 10);
                     
                     document.getElementById("result").innerHTML = result;
                 }
